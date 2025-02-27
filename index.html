@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>5 Segreti per Sbloccare il Metabolismo</title>
+    <style>
+        /* Prevenzione movimenti indesiderati */
+        html, body {
+            overflow-x: hidden;
+            position: relative;
+            width: 100%;
+            margin: 0;
+            padding: 0;
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            color: #2D3748;
+            line-height: 1.6;
+        }
+        
+        * {
+            box-sizing: border-box;
+            -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+        }
+        
+        img, svg {
+            max-width: 100%;
+            height: auto;
+        }
+        
+        /* Copertina */
+        .cover {
+            width: 210mm;  /* A4 width */
+            height: 297mm; /* A4 height */
+            background: linear-gradient(135deg, #2C5282, #3182CE);
+            color: white;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 40px;
+            box-sizing: border-box;
+            page-break-after: always;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .cover::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><circle cx="50" cy="50" r="40" fill="none" stroke="rgba(255,255,255,0.05)" stroke-width="2"/></svg>');
+            opacity: 0.4;
+        }
+        
+        .logo-area {
+            margin-bottom: 60px;
+            text-align: center;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .logo {
+            max-width: 200px;
+            height: auto;
+            margin: 0 auto;
+            display: block;
+        }
+        
+        .logo-text {
+            font-size: 24px;
+            font-weight: 300;
+            letter-spacing: 2px;
+            margin-bottom: 10px;
+        }
+        
+        .title {
+            font-size: 42px;
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 20px;
+            line-height: 1.2;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .subtitle {
+            font-size: 24px;
+            font-weight: 300;
+            text-align: center;
+            margin-bottom: 60px;
+            opacity: 0.9;
+            max-width: 80%;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .author {
+            margin-top: 80px;
+            text-align: center;
+            font-size: 18px;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .qualification {
+            font-size: 16px;
+            opacity: 0.9;
+            margin-top: 5px;
+        }
+        
+        /* Pagine di contenuto */
+        .page {
+            width: 210mm;  /* A4 width */
+            height: 297mm; /* A4 height */
+            padding: 25mm 20mm;
+            box-sizing: border-box;
+            page-break-after: always;
+        }
+        
+        .intro {
+            margin-bottom: 40px;
+        }
+        
+        h1 {
+            color: #2C5282;
+            font-size: 24px;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+        
+        h2 {
+            color: #3182CE;
+            font-size: 20px;
+            font-weight: 500;
+            margin-top: 40px;
+            margin-bottom: 15px;
+            border-bottom: 1px solid #E2E8F0;
+            padding-bottom: 10px;
+        }
+        
+        p {
+            margin-bottom: 15px;
+        }
+        
+        .strategy {
+            margin-bottom: 60px;
+            background-color: #F7FAFC;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            margin-top: 60px;
+        }
+        
+        .strategy:first-of-type {
+            margin-top: 0;
+        }
+        
+        .tip-box {
+            background-color: #EBF8FF;
+            border-left: 4px solid #4299E1;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+        
+        .insight-box {
+            background-color: #F0FFF4;
+            border-left: 4px solid #48BB78;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+        
+        .caution-box {
+            background-color: #FFFAF0;
+            border-left: 4px solid #ED8936;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+        
+        .box-title {
+            font-weight: bold;
+            color: #2C5282;
+            margin-bottom: 5px;
+        }
+        
+        .conclusion {
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #E2E8F0;
+        }
+        
+        .cta {
+            background: linear-gradient(135deg, #192A56, #273C75);
+            color: white;
+            padding: 25px;
+            text-align: center;
+            border-radius: 8px;
+            margin-top: 40px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        
+        .cta h2 {
+            color: white; 
+            border-bottom: none;
+        }
+        
+        .contact-info {
+            display: inline-block;
+            background: rgba(255,255,255,0.15);
+            padding: 10px 20px;
+            border-radius: 50px;
+            margin-top: 15px;
+            color: #FFFFFF;
+            font-weight: 600;
+            text-decoration: none;
+        }
+        
+        .footer {
+            margin-top: 60px;
+            font-size: 14px;
+            color: #718096;
+            text-align: center;
+            border-top: 1px solid #E2E8F0;
+            padding-top: 20px;
+        }
+        
+        .references {
+            font-style: italic;
+            margin-top: 10px;
+        }
+        
+        @media screen and (max-width: 768px) {
+            .page, .cover {
+                width: 100%;
+                height: auto;
+                min-height: 100vh;
+            }
+            
+            .page {
+                padding: 40px 20px;
+            }
+            
+            .strategy {
+                margin-top: 40px;
+                margin-bottom: 40px;
+            }
+            
+            .strategy:first-of-type {
+                margin-top: 0;
+            }
+            
+            .title {
+                font-size: 32px;
+            }
+            
+            .subtitle {
+                font-size: 18px;
+            }
+        }
+        
+        @media print {
+            .page, .cover {
+                width: 210mm;
+                height: 297mm;
+                page-break-after: always;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Copertina -->
+    <div class="cover">
+        <div class="logo-area">
+            <svg class="logo" viewBox="0 0 400 500" height="100">
+                <circle 
+                    cx="200" 
+                    cy="150" 
+                    r="140" 
+                    fill="none" 
+                    stroke="white" 
+                    stroke-width="20" 
+                    stroke-linecap="round"
+                    stroke-opacity="0.8"
+                />
+                
+                <text 
+                    x="200" 
+                    y="360" 
+                    text-anchor="middle" 
+                    font-family="Arial" 
+                    font-size="48" 
+                    font-weight="700" 
+                    fill="white"
+                    letter-spacing="2"
+                >L'ALTRA</text>
+                
+                <text 
+                    x="200" 
+                    y="420" 
+                    text-anchor="middle" 
+                    font-family="Arial" 
+                    font-size="48" 
+                    font-weight="400" 
+                    fill="white"
+                    letter-spacing="0"
+                >NUTRIZIONE</text>
+            </svg>
+        </div>
+
+        <div class="title">5 SEGRETI PER SBLOCCARE IL METABOLISMO</div>
+        
+        <div class="subtitle">
+            Strategie avanzate basate sulla scienza emergente per ottimizzare la risposta metabolica
+        </div>
+        
+        <div class="author">
+            <div>David Varutti</div>
+            <div class="qualification">Consulente Nutrizionale</div>
+            <div class="qualification">Certificato Fitness Nutritionist ISSA</div>
+        </div>
+    </div>
+
+    <!-- Pagina 1: Introduzione -->
+    <div class="page">
+        <div class="intro">
+            <h1>Introduzione: Oltre il Convenzionale</h1>
+            <p>
+                Benvenuto nella guida esclusiva "5 Segreti per Sbloccare il Metabolismo". Questo documento non è la solita raccolta di consigli generici sulla nutrizione, ma una finestra sulle strategie avanzate che utilizzo con i miei clienti per risultati straordinari.
+            </p>
+            <p>
+                Come Fitness Nutritionist certificato ISSA, il mio approccio va oltre la superficiale "calorie in vs calorie out" ed esplora la complessità dei sistemi biologici che governano il nostro metabolismo. Queste strategie rappresentano l'intersezione tra la ricerca emergente e l'applicazione pratica.
+            </p>
+            <p>
+                Ciò che stai per scoprire è solo un assaggio del metodo completo che sviluppo nei piani personalizzati de L'Altra Nutrizione. Approcci nutrizionali avanzati, strategie metaboliche e tecniche evidence-based che raramente vengono discusse nelle comuni guide alla nutrizione.
+            </p>
+        </div>
+
+        <div class="strategy">
+            <h2>Segreto #1: Il Timing Circadiano</h2>
+            <p>
+                Il tuo corpo non è una semplice macchina che brucia calorie: è un sistema complesso governato da ritmi biologici precisi. La ricerca emergente sulla cronobiologia nutrizionale rivela che <strong>quando</strong> mangi è importante quanto <strong>cosa</strong> mangi per l'ottimizzazione metabolica.
+            </p>
+            <p>
+                I tuoi organi metabolici (fegato, pancreas, tessuto adiposo) seguono ritmi circadiani che influenzano la sensibilità insulinica, l'ossidazione dei grassi e persino l'espressione di geni legati al metabolismo. Sincronizzare l'assunzione di nutrienti con questi ritmi può amplificare significativamente i risultati.
+            </p>
+            
+            <div class="insight-box">
+                <div class="box-title">Insight Esclusivo:</div>
+                <p>La sensibilità insulinica è maggiore nelle prime ore del giorno e diminuisce progressivamente verso sera. Secondo studi recenti (Jamshed et al., 2019; Jakubowicz et al., 2022), concentrare l'assunzione di carboidrati nelle prime 8-10 ore della giornata migliora il profilo glicemico del 20-30% rispetto alla stessa quantità di carboidrati distribuita nell'arco della giornata.</p>
+            </div>
+            
+            <div class="tip-box">
+                <div class="box-title">Applicazione Pratica:</div>
+                <p>Crea una "finestra nutrizionale" di 10-12 ore allineata con il tuo ritmo circadiano naturale (es. 7:00-19:00), concentrando i carboidrati complessi nella prima metà della giornata. Idealmente, concludi il tuo ultimo pasto almeno 3 ore prima di coricarti per ottimizzare la produzione di melatonina e la qualità del sonno.</p>
+            </div>
+        </div>
+
+        <div class="strategy">
+            <h2>Segreto #2: Microbioma e Termoregolazione</h2>
+            <p>
+                Il tuo intestino ospita un ecosistema di trilioni di microrganismi che influenzano direttamente il tuo metabolismo. Ricerche all'avanguardia mostrano che specifici ceppi batterici possono aumentare la produzione di acidi grassi a catena corta (SCFA) che influenzano positivamente il metabolismo energetico e la composizione corporea.
+            </p>
+            <p>
+                Questo processo può rappresentare una differenza significativa nel dispendio energetico quotidiano, contribuendo a un metabolismo più efficiente.
+            </p>
+            
+            <div class="insight-box">
+                <div class="box-title">Insight Esclusivo:</div>
+                <p>Studi recenti (Depommier et al., 2020; Plovier et al., 2021) hanno identificato che specifici ceppi batterici come Akkermansia muciniphila e certe varietà di Lactobacillus sono associati a una migliore gestione energetica e possono influenzare positivamente la composizione corporea attraverso diversi meccanismi metabolici.</p>
+            </div>
+            
+            <div class="tip-box">
+                <div class="box-title">Applicazione Pratica:</div>
+                <p>Integra quotidianamente alimenti ricchi di polifenoli (bacche scure, cacao, tè verde), fibre fermentabili (cicoria, topinambur, porri) e prebiotici specifici (inulina, frutto-oligosaccaridi) per nutrire selettivamente i ceppi batterici termogenici. Combina con esposizione strategica al freddo (docce fredde di 30-60 secondi) per amplificare l'attivazione del tessuto adiposo bruno.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="page" style="padding-top:20mm; padding-bottom:20mm;">
+        <div class="strategy">
+            <h2>Segreto #3: Ormesi Nutrizionale</h2>
+            <p>
+                L'ormesi è un fenomeno biologico per cui stress di bassa intensità attivano potenti risposte adattative nell'organismo. Nel contesto nutrizionale, specifici "stressori benefici" possono stimolare vie metaboliche che migliorano l'efficienza energetica e la risposta dell'organismo.
+            </p>
+            <p>
+                Questa "esercitazione metabolica" è paragonabile all'allenamento muscolare: piccoli stress controllati portano ad adattamenti che rendono il sistema più efficiente e resiliente nel lungo termine.
+            </p>
+            
+            <div class="insight-box">
+                <div class="box-title">Insight Esclusivo:</div>
+                <p>La restrizione temporanea di energia attiva meccanismi cellulari che regolano processi metabolici importanti e l'ottimizzazione energetica. Recenti studi (Longo & Panda, 2016; Anton et al., 2018) mostrano che questi benefici possono essere supportati anche attraverso specifici composti bioattivi presenti in alimenti come curcuma, tè verde e frutti di bosco.</p>
+            </div>
+            
+            <div class="tip-box">
+                <div class="box-title">Applicazione Pratica:</div>
+                <p>Implementa 1-2 giorni non consecutivi a settimana di restrizione calorica moderata (riduzione del 20-30% rispetto al fabbisogno) abbinati a composti ormetici come EGCG del tè verde, sulforafano (broccoli, cavoli) e resveratrolo (uva rossa, frutti di bosco). Per risultati ottimali, programma questi giorni lontano da sessioni di allenamento intense.</p>
+            </div>
+            
+            <div class="caution-box">
+                <div class="box-title">Nota Importante:</div>
+                <p>L'ormesi nutrizionale funziona secondo una curva a campana: lo stress deve essere moderato e seguito da adeguato recupero. Non è adatto in situazioni di elevato stress psicofisico, gravidanza o condizioni mediche specifiche.</p>
+            </div>
+        </div>
+
+        <div class="strategy">
+            <h2>Segreto #4: Nutrigenomica Pratica</h2>
+            <p>
+                Ogni individuo presenta un profilo metabolico unico che influenza la risposta ai nutrienti, il metabolismo dei macronutrienti e la capacità di utilizzare i diversi alimenti. Esistono approcci pratici per identificare il proprio "archetipo metabolico" e personalizzare l'alimentazione di conseguenza.
+            </p>
+            <p>
+                La nutrigenomica pratica si basa sull'osservazione delle proprie risposte individuali per adattare l'alimentazione alla propria biochimica unica.
+            </p>
+            
+            <div class="insight-box">
+                <div class="box-title">Insight Esclusivo:</div>
+                <p>La ricerca mostra (Gardner et al., 2018; Berry et al., 2020) che indicatori come i livelli di energia post-prandiale, le fluttuazioni della fame e i cambiamenti nella composizione corporea in risposta a diverse distribuzioni di macronutrienti possono rivelare molto sulla tua fisiologia individuale.</p>
+            </div>
+            
+            <div class="tip-box">
+                <div class="box-title">Applicazione Pratica:</div>
+                <p>Conduci un auto-esperimento di 2 settimane alternando tra 3 giorni ad alto contenuto di grassi sani/basso contenuto di carboidrati e 3 giorni a moderato contenuto di carboidrati complessi. Monitora energia, chiarezza mentale, fame e recupero dall'esercizio. La variante che produce i migliori risultati è probabilmente più allineata con il tuo profilo metabolico. Raffinala ulteriormente con l'ausilio di un professionista.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Pagina 3: Continuazione strategie e conclusione -->
+    <div class="page">
+        <div class="strategy">
+            <h2>Segreto #5: Integrazione Sinergica Avanzata</h2>
+            <p>
+                Oltre ai singoli nutrienti, la scienza emergente sta rivelando l'importanza delle interazioni biochimiche tra composti bioattivi. Specifiche combinazioni di micronutrienti e fitonutrienti possono creare effetti sinergici che amplificano l'impatto nutrizionale ben oltre la somma delle loro parti.
+            </p>
+            <p>
+                Questa "biochimica combinatoria" rappresenta la frontiera della nutrizione personalizzata, dove le interazioni nutriente-nutriente vengono programmate strategicamente per ottimizzare i processi metabolici.
+            </p>
+            
+            <div class="insight-box">
+                <div class="box-title">Insight Esclusivo:</div>
+                <p>Recenti studi nutrizionali (Wang et al., 2021; Salehi et al., 2019) hanno dimostrato che la combinazione di quercetina con vitamina C ne aumenta significativamente la biodisponibilità, mentre l'associazione di acidi grassi omega-3 con antiossidanti come l'astaxantina crea un effetto protettivo sinergico che supporta l'efficienza metabolica.</p>
+            </div>
+            
+            <div class="tip-box">
+                <div class="box-title">Applicazione Pratica:</div>
+                <p>Abbina strategicamente: curcuma con pepe nero (aumenta l'assorbimento della curcumina del 2000%); vitamina D con K2 e magnesio (ottimizzazione metabolica del calcio); zinco con selenio e vitamina E (potenziamento antiossidante cellulare); omega-3 ad alta concentrazione di DHA con astaxantina (protezione mitocondriale avanzata).</p>
+            </div>
+        </div>
+
+        <div class="conclusion">
+            <h1>La Scienza Dietro i Risultati</h1>
+            <p>
+                Questi cinque segreti rappresentano solo la punta dell'iceberg di ciò che la scienza nutrizionale avanzata può offrire. Ciò che li distingue dalle comuni strategie è la loro radice nella ricerca metabolica di frontiera e la loro capacità di creare effetti sinergici quando implementati come sistema coerente.
+            </p>
+            <p>
+                È importante sottolineare che, sebbene questi principi siano scientificamente fondati, la loro applicazione ottimale richiede una personalizzazione precisa. Ogni organismo risponde in modo unico agli stimoli nutrizionali, e le variabili individuali come genetica, epigenetica, composizione del microbioma e stile di vita giocano un ruolo fondamentale nel determinare la strategia ideale.
+            </p>
+            <p>
+                È qui che entra in gioco l'approccio de L'Altra Nutrizione: combinare la scienza all'avanguardia con l'arte della personalizzazione, per creare piani nutrizionali che rispettino la tua unicità biologica e massimizzino il tuo potenziale metabolico.
+            </p>
+        </div>
+
+        <div class="cta">
+            <h2>Scopri il Tuo Piano Nutrizionale Personalizzato</h2>
+            <p>
+                Immagina di avere un piano nutrizionale completamente calibrato sulla tua biochimica unica, che tenga conto del tuo profilo ormonale, della composizione corporea e degli obiettivi specifici.
+            </p>
+            <p>
+                Nei miei programmi personalizzati, queste strategie avanzate sono integrate in un sistema coerente e adattato alle tue esigenze individuali, monitorato attraverso analisi della composizione corporea e costantemente ottimizzato in base ai tuoi progressi.
+            </p>
+            <p>
+                Prenota una consulenza nutrizionale professionale per scoprire come la scienza nutrizionale avanzata può trasformare il tuo metabolismo e portarti a risultati che pensavi impossibili.
+            </p>
+            <a href="tel:+393201720963" class="contact-info">WhatsApp: +39 320 1720963</a>
+            <br><br>
+            <a href="mailto:laltranutrizione@protonmail.com" class="contact-info">Email: laltranutrizione@protonmail.com</a>
+        </div>
+
+        <div class="footer">
+            <p>© 2025 L'Altra Nutrizione - David Varutti</p>
+            <p>Questa guida contiene informazioni basate su evidenze scientifiche ed è fornita esclusivamente a scopo educativo.</p>
+            <p>Non sostituisce la consulenza medica professionale. Consulta sempre un professionista della salute per problemi medici specifici.</p>
+            <p class="references">Riferimenti bibliografici disponibili su richiesta. Tutte le informazioni sono tratte da pubblicazioni scientifiche peer-reviewed.</p>
+        </div>
+    </div>
+
+    <!-- Pagina 4: Riferimenti Bibliografici -->
+    <div class="page">
+        <h1>Riferimenti Bibliografici</h1>
+        
+        <div style="margin-bottom: 30px;">
+            <h2>Timing Circadiano</h2>
+            <p>Jamshed, H., Beyl, R. A., Della Manna, D. L., Yang, E. S., Ravussin, E., & Peterson, C. M. (2019). Early Time-Restricted Feeding Improves 24-Hour Glucose Levels and Affects Markers of the Circadian Clock, Aging, and Autophagy in Humans. <em>Nutrients</em>, 11(6), 1234.</p>
+            <p>Jakubowicz, D., Landau, Z., Tsameret, S., Wainstein, J., Raz, I., Ahren, B., Chapnik, N., Ganz, T., Menaged, M., Barnea, M., Bar-Dayan, Y., & Froy, O. (2022). Reduction in Glycated Hemoglobin and Daily Insulin Dose Alongside Circadian Clock Upregulation in Patients With Type 2 Diabetes Consuming a Three-Meal Diet: A Randomized Clinical Trial. <em>Diabetes Care</em>, 45(1), 30-38.</p>
+        </div>
+        
+        <div style="margin-bottom: 30px;">
+            <h2>Microbioma e Termoregolazione</h2>
+            <p>Depommier, C., Everard, A., Druart, C., Plovier, H., Van Hul, M., Vieira-Silva, S., Falony, G., Raes, J., Maiter, D., Delzenne, N. M., de Barsy, M., Loumaye, A., Hermans, M. P., Thissen, J. P., de Vos, W. M., & Cani, P. D. (2020). Supplementation with <em>Akkermansia muciniphila</em> in overweight and obese human volunteers: a proof-of-concept exploratory study. <em>Nature Medicine</em>, 25(7), 1096-1103.</p>
+            <p>Plovier, H., Van Hul, M., Geurts, L., & Cani, P. D. (2021). Modulation of obesity and insulin resistance by specific bacteria: a target for therapeutic intervention. <em>Current Opinion in Pharmacology</em>, 61, 120-128.</p>
+        </div>
+        
+        <div style="margin-bottom: 30px;">
+            <h2>Ormesi Nutrizionale</h2>
+            <p>Longo, V. D., & Panda, S. (2016). Fasting, Circadian Rhythms, and Time-Restricted Feeding in Healthy Lifespan. <em>Cell Metabolism</em>, 23(6), 1048-1059.</p>
+            <p>Anton, S. D., Moehl, K., Donahoo, W. T., Marosi, K., Lee, S. A., Mainous, A. G. 3rd, Leeuwenburgh, C., & Mattson, M. P. (2018). Flipping the Metabolic Switch: Understanding and Applying the Health Benefits of Fasting. <em>Obesity</em>, 26(2), 254-268.</p>
+        </div>
+        
+        <div style="margin-bottom: 30px;">
+            <h2>Nutrigenomica Pratica</h2>
+            <p>Gardner, C. D., Trepanowski, J. F., Del Gobbo, L. C., Hauser, M. E., Rigdon, J., Ioannidis, J. P. A., Desai, M., & King, A. C. (2018). Effect of Low-Fat vs Low-Carbohydrate Diet on 12-Month Weight Loss in Overweight Adults and the Association With Genotype Pattern or Insulin Secretion: The DIETFITS Randomized Clinical Trial. <em>JAMA</em>, 319(7), 667-679.</p>
+            <p>Berry, S. E., Valdes, A. M., Drew, D. A., Asnicar, F., Mazidi, M., Wolf, J., Capdevila, J., Hadjigeorgiou, G., Davies, R., Al Khatib, H., Bonnett, C., Ganesh, S., Bakker, E., Hart, D., Mangino, M., Merino, J., Linenberg, I., Wyatt, P., Ordovas, J. M., … Spector, T. D. (2020). Human postprandial responses to food and potential for precision nutrition. <em>Nature Medicine</em>, 26(6), 964–973.</p>
+        </div>
+        
+        <div style="margin-bottom: 30px;">
+            <h2>Integrazione Sinergica Avanzata</h2>
+            <p>Wang, Y., Hekmatimoghaddam, S., Li, Z., Li, N., Heuvel, J. V., & Wu, S. (2021). Natural Polyphenols and Bioavailability: An Update. <em>Journal of Food Bioactives</em>, 14, 50-75.</p>
+            <p>Salehi, B., Stojanović-Radić, Z., Matejić, J., Sharifi-Rad, M., Anil Kumar, N. V., Martins, N., & Sharifi-Rad, J. (2019). The therapeutic potential of curcumin: A review of clinical trials. <em>European Journal of Medicinal Chemistry</em>, 163, 527-545.</p>
+        </div>
+        
+        <div style="margin-top: 50px; text-align: center;">
+            <p style="font-style: italic;">© 2025 L'Altra Nutrizione - David Varutti</p>
+            <p style="font-style: italic;">Consulente Nutrizionale - Certificato Fitness Nutritionist ISSA</p>
+        </div>
+    </div>
+</body>
+</html>
